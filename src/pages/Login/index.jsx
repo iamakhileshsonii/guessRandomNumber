@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import LoginForm from './form/loginForm';
 
 const index = () => {
   return (
-    <div>index</div>
+    <LoginForm/>
   )
 }
 
