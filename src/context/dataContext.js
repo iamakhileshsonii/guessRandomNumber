@@ -1,11 +1,12 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { db } from "../firebase/firebase";
-import { getDocs, collection } from "firebase/firestore";
+import { getDocs, collection, query, orderBy } from "firebase/firestore";
 
 const DataContext = createContext();
 
 const DataProvider = ({ children }) => {
   const docRef = collection(db, "game");
+  const orderedQuery = query(docRef, orderBy("createdAt", "desc")); // Ordering by createdAt in descending order
 
   const [gameData, setGameData] = useState([]);
   const [gameDataLoading, setGameDataLoading] = useState(true);
@@ -14,7 +15,7 @@ const DataProvider = ({ children }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const querySnapshot = await getDocs(docRef);
+        const querySnapshot = await getDocs(orderedQuery);
         const data = querySnapshot.docs.map((doc) => ({
           ...doc.data(),
           id: doc.id,
@@ -25,15 +26,12 @@ const DataProvider = ({ children }) => {
       } finally {
         setGameDataLoading(false);
       }
+
+      console.log("Data Fetched!");
     };
 
     fetchData();
-
-    // Cleanup function
-    return () => {
-      // Perform any cleanup if needed
-    };
-  }, [docRef]);
+  }, []);
 
   return (
     <DataContext.Provider value={{ gameData, gameDataLoading, error }}>

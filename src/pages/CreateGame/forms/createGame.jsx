@@ -23,9 +23,8 @@ const CreateGame = () => {
                 gameTime: event.target.gameTime.value,
                 resultTime: event.target.gameResultTime.value,
                 gameNumber: event.target.gameNumber.value,
-                gameInfo: {
-                    createdAt: new Date() 
-                }}
+                createdAt: new Date() 
+                }
 
                 addDoc(docRef, createNewGame);
                 navigate("/")

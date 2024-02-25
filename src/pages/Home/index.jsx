@@ -1,9 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import GameBoard from './components/gameBoard';
 import bg from '../../../src/assets/images/gameBg.jpeg'; // Assuming this is your background image
 import { useDataContext } from '../../context/dataContext';
 
+
 const Index = () => {
+  const { gameData, gameDataLoading, error } = useDataContext();
+  const [displayGameTime, setDisplayGameTime] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDisplayGameTime(true);
+    }, 10000); // 10 seconds in milliseconds
+
+    return () => clearTimeout(timer); // Clear the timeout when the component unmounts or when the dependency changes
+  }, []);
+
+  if (gameDataLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
   return (
     <div className='bg-gradient-to-r from-black to-purple min-h-screen' style={{ backgroundImage: `url(${bg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
       <div className=' flex justify-center gap-2 py-10'>
@@ -13,8 +33,8 @@ const Index = () => {
         <h2 className='font-bold text-2xl text-white'>HAPUD</h2>
       </div>
       <div className='block p-10'>
-        <h4 className='text-4xl font-bold text-center text-white p-2'>93</h4>
-        <p className='text-white text-center text-xs px-10'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, amet.</p>
+        <h4 className='text-4xl font-bold text-center text-white p-2'>{gameData[0]?.gameNumber}</h4>
+        <p className='text-white text-center text-xs px-10'>{gameData && `Game started at ${gameData[0]?.gameTime}`}</p>
       </div>
       <GameBoard />
       <div className='p-5'>

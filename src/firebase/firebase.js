@@ -12,13 +12,25 @@ import { getFirestore } from "firebase/firestore";
 //   appId: "1:698095017798:web:8797d7f74e2305553ecf47",
 // };
 
+// soniakhileshbnb@gmail.com
+// const firebaseConfig = {
+//   apiKey: "AIzaSyCVBvOdQDvSLXGu3kFQj3xb-B0YSONJfeA",
+//   authDomain: "randomnumber-ee2ac.firebaseapp.com",
+//   projectId: "randomnumber-ee2ac",
+//   storageBucket: "randomnumber-ee2ac.appspot.com",
+//   messagingSenderId: "1031419518159",
+//   appId: "1:1031419518159:web:8fd34e60310aee41b5abba",
+// };
+
+// thisisakhileshsoni@gmail.com
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCVBvOdQDvSLXGu3kFQj3xb-B0YSONJfeA",
-  authDomain: "randomnumber-ee2ac.firebaseapp.com",
-  projectId: "randomnumber-ee2ac",
-  storageBucket: "randomnumber-ee2ac.appspot.com",
-  messagingSenderId: "1031419518159",
-  appId: "1:1031419518159:web:8fd34e60310aee41b5abba",
+  apiKey: "AIzaSyDqBwP7qsJnnPQR1vigGmX731fmR7PoYWQ",
+  authDomain: "akhileshprojects-4f896.firebaseapp.com",
+  projectId: "akhileshprojects-4f896",
+  storageBucket: "akhileshprojects-4f896.appspot.com",
+  messagingSenderId: "241191603108",
+  appId: "1:241191603108:web:93089bbb3fa50f3031cf31",
 };
 
 // Initialize Firebase
