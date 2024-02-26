@@ -24,13 +24,24 @@ import { getFirestore } from "firebase/firestore";
 
 // thisisakhileshsoni@gmail.com
 // Your web app's Firebase configuration
+// const firebaseConfig = {
+//   apiKey: "AIzaSyDqBwP7qsJnnPQR1vigGmX731fmR7PoYWQ",
+//   authDomain: "akhileshprojects-4f896.firebaseapp.com",
+//   projectId: "akhileshprojects-4f896",
+//   storageBucket: "akhileshprojects-4f896.appspot.com",
+//   messagingSenderId: "241191603108",
+//   appId: "1:241191603108:web:93089bbb3fa50f3031cf31",
+// };
+
+// HAPUD
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDqBwP7qsJnnPQR1vigGmX731fmR7PoYWQ",
-  authDomain: "akhileshprojects-4f896.firebaseapp.com",
-  projectId: "akhileshprojects-4f896",
-  storageBucket: "akhileshprojects-4f896.appspot.com",
-  messagingSenderId: "241191603108",
-  appId: "1:241191603108:web:93089bbb3fa50f3031cf31",
+  apiKey: "AIzaSyBvNgj2sBSkkvvdvwkvDABXysk9LOo7zbA",
+  authDomain: "hapurkhabar-17b53.firebaseapp.com",
+  projectId: "hapurkhabar-17b53",
+  storageBucket: "hapurkhabar-17b53.appspot.com",
+  messagingSenderId: "713820298370",
+  appId: "1:713820298370:web:030949bd587f2129d8e89b",
 };
 
 // Initialize Firebase

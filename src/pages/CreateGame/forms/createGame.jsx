@@ -62,7 +62,7 @@ const CreateGame = () => {
         
 
         <div className='flex justify-between m-2 sm:w-full'>
-            <label htmlFor="gameResultTime" className='font-semibold'>Old games</label>
+            <label htmlFor="gameResultTime" className='font-semibold'>Result Time</label>
             <select name="gameResultTime" className='underline '>
                 {
                     timeSlots.map((time)=>(
