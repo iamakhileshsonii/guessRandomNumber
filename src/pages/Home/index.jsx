@@ -8,14 +8,6 @@ const Index = () => {
   const { gameData, gameDataLoading, error } = useDataContext();
   const [displayGameTime, setDisplayGameTime] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setDisplayGameTime(true);
-    }, 10000); // 10 seconds in milliseconds
-
-    return () => clearTimeout(timer); // Clear the timeout when the component unmounts or when the dependency changes
-  }, []);
-
   if (gameDataLoading) {
     return <div>Loading...</div>;
   }

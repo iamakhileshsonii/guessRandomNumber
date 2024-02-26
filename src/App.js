@@ -7,11 +7,18 @@ import LoginForm from "./pages/Login/form/loginForm";
 import CreateGame from "./pages/CreateGame";
 import Login from "./pages/Login";
 import UsePrivateRoute from "./hooks/usePrivateRoute";
+import { useState } from "react";
 
 function App() {
+  const [isAuth, setIsAuth] = useState(
+    JSON.parse(localStorage.getItem("RandomGameAuth")) || false
+  );
+
   return (
     <>
       <BrowserRouter>
+        {isAuth ? <Header /> : ""}
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<LoginForm />} />
