@@ -36,6 +36,12 @@ const Index = () => {
           <div className='flex justify-evenly gap-3 bg-glass py-1 px-2 rounded-sm text-white'>Telegram</div>
         </div>
       </div>
+
+      <div className='p-5'>
+        <a href="https://sattaaking.com/"><h4 className='text-white font-semibold text-xl text-center py-5 underline underline-offset-4 decoration-yellow'>View More</h4></a>
+        
+        
+      </div>
     </div>
   )
 }
